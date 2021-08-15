@@ -1,5 +1,5 @@
 # #BadIdeaBrainstorm #
-##concept version##
+## concept version ##
 
 ALX community App from the community
 
@@ -27,7 +27,7 @@ yes, I can! but still not comfortable and since this is a bad idea Brainstorm I 
 2. Electron-Tabs for the navigations
 3. Uaup-js to update the app over the network
 
-##  Next Realse ##
+###  Next Realse ###
 
 I don't know maybe in my free time and if you want to contribute to this project feel free since this project is for ALX community App from the community
 
