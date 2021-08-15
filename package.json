@@ -1,0 +1,39 @@
+{
+  "name": "alx-os",
+  "productName": "ALX OS",
+  "version": "0.0.1",
+  "description": "alx os working browser",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "lint": "echo \"No linting configured\"",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "fitsum belay",
+  "license": "MIT",
+  "build": {
+    "appId": "et.sefer.alxos",
+    "files": [
+      "**/*",
+      "./src/assets/images/icon.*"
+    ],
+
+    "icon":"./src/assets/images/icon.png",
+    "productName": "ALX OS",
+    "target": "NSIS",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
+   
+  },
+  "dependencies": {
+    "electron-tabs": "^0.15.0",
+    "uaup-js": "^0.0.22"
+  },
+  "devDependencies": {
+    "electron": "13.1.9",
+    "electron-builder": "^22.11.7"
+  }
+}

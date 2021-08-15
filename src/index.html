@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="./index.css">
+   <script defer src="./assets/js/functionality.js"></script>
+  
+</head>
+<body>
+  <div class="progress-bar">
+    <div id="os_progress_indicator" data-size="60" class="progress"></div>
+  </div>
+  <header>
+    
+    <div class="alx_os_nav">
+
+    <div class="logo">
+       <img src="./assets/images/logo.svg" alt="">
+         <div id="logo_text">
+          <h3>alx</h3> <h6>OS</h6>
+         </div> 
+      </div>
+    <div class="alx_os_TitleBarMenu">
+      <span id="minimizeWindowBtn">
+        <img src="./assets/images/minus_black.svg" alt="" srcset="">
+
+      </span>
+      <span  id="maximizeRestoreWindowBtn" >
+        <img id="maxResImg" src="./assets/images/stop_black.svg" alt="" srcset="">
+      </span>
+      <span id="closeWindowBtn">
+        <img src="./assets/images/cancel_black.svg" alt="" srcset="">
+      </span>
+    </div>
+  </div>
+  </header>
+<main>
+ 
+  <aside id="os_side_nav">
+    <div class="alx_os_nav">
+      <div class="etabs-tabgroup">
+        <div class="etabs-tabs"></div>
+      </div>
+    </div>
+    
+  </aside>
+  <div id="nav_smart_barBtn" class="alx_os_nav_footer">
+    <img src="./assets/images/slider.svg" alt="">
+  </div>
+  <article>
+    <div class="etabs-views"></div>
+  </article>
+</main>
+
+
+
+
+<script>
+  const TabGroup = require('electron-tabs');
+  // const TabGroup = require("../index");
+
+  let tabGroup = new TabGroup({
+   
+  });
+
+
+  
+  tabGroup.addTab({
+    title: null,
+    iconURL: './assets/images/alx.png',
+    src: 'https://alx-intranet.hbtn.io/',
+    closable:false,
+    active: true
+  });
+  
+  tabGroup.addTab({
+    title: null,
+    src: 'https://alx-se.thinkific.com/',
+    iconURL: './assets/images/room.png',
+    closable:false,
+  });
+  
+  tabGroup.addTab({
+    title: null,
+    iconURL: './assets/images/slack.svg',
+    src: 'https://alx-students.slack.com',
+    closable:false,
+  });
+  
+  let tab = tabGroup.addTab({
+    title: null,
+    src: "https://accounts.google.com/signin",
+    iconURL: './assets/images/email.svg',
+    closable:false,
+    visible: true,
+    
+  });
+
+  tabGroup.addTab({
+    title: null,
+    src: "http://github.com/login",
+    iconURL: './assets/images/github.svg',
+    closable:false,
+    visible: true,
+    
+  });
+  
+   
+</script>
+<script src="./assets/js/updater.js"></script>
+</body>
+</html>

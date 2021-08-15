@@ -1,0 +1,187 @@
+.progress-bar {
+  position: absolute;
+  top: 0;
+	background-color: transparent;
+	border-radius: 3px;
+
+	height: 3px;
+	width: 100%;
+	max-width: 100%;
+  z-index: 1001;
+}
+
+.progress {
+	background: #ffebcd;
+	border-radius: 3px;
+	height: 3px;
+	width: 0;
+	transition: width 0.5s ease-in;
+}
+
+html, body, main {
+  height: 100%;
+  /* overflow-y:hidden; */
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  /* max-width: 38rem; */
+  /* padding: 2rem; */
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-bottom:1px solid rgba(0, 0, 0, 0.038) ;
+  -webkit-app-region:drag;
+ 
+  user-select: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(0 0 0 / 75%);
+ 
+}
+
+#logo_text {
+  display: flex;
+
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  padding:0 10px
+}
+
+.alx_os_nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 10px;
+}
+.alx_os_TitleBarMenu span {
+  padding: 10px;
+  -webkit-app-region:no-drag
+ }
+  .alx_os_TitleBarMenu img
+{
+  width: 18px;
+}
+
+
+
+.alx_os_TitleBarMenu span:hover { 
+  background: rgba(218, 202, 202, 0.24);
+}
+main {
+  display: flex;
+  max-width: 100%;
+
+}
+.overlay_nav {
+  position: absolute;
+  width: 60px;
+  height:100%;
+  z-index: 10;
+  background-color: black;
+}
+
+
+aside {
+   flex:none;
+   width: 60px;
+   max-width: 60px;
+   overflow: hidden;
+   padding: 10px 0;
+   border-right: 1px solid rgba(0, 0, 0, 0.038);
+
+}
+aside .alx_os_nav {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+ 
+}
+aside .etabs-tabgroup {
+  display: flex;
+}
+
+
+
+article {
+  flex:auto;
+
+}
+
+article .etabs-views {
+
+  position: relative;
+  height: calc(100% - 50px);
+  margin-top: 50px;
+}
+
+.etabs-tab {
+  /* padding:10px */
+  margin:10px 0;
+
+  padding: 2px 5px;
+  max-height: 30px;
+}
+
+
+.etabs-tab-icon img, .alx_os_nav_footer img {
+  width: 30px;
+  max-width: 35px;
+  /* height: 50px; */
+}
+.alx_os_nav_footer {
+  z-index: 100;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: white;
+  padding: 3px;
+  border-radius: 10px;
+}
+.active {
+
+  border: 1px solid #ffebcd;
+  background-color: #ffebcd;
+  border-radius: 5px;
+  
+  width: 100%;
+
+  max-width: 100%;
+
+}
+
+.hidden {
+  display: none;
+}
+
+/* .minimizeBtn {
+   background-image: url(./assets/images/minus_black.svg);
+   background-repeat: none;
+
+  }
+.maximizeRestoreBtn {
+  background-image: url(./assets/images/cube_black.svg);
+  background-repeat: none;
+}
+.closeWindowBtn {
+  background-image: url(./assets/images/stop_black.svg);
+  background-repeat: none;
+
+} */
