@@ -16,12 +16,14 @@ const updateOptions = {
    
      gitRepo: "alxos", // [Required] Your Repo Name
      gitUsername: "f-i-t-s-u-m",  // [Required] Your GitHub Username.
-     appName: "alx os", //[Required] The Name of the app archive and the app folder.
-     appExecutableName: "alx os.exe", //[Required] The Executable of the Application to be Run after updating.
+     appName: "ALX-OS", //[Required] The Name of the app archive and the app folder.
+     appExecutableName: "ALX-OS.exe", //[Required] The Executable of the Application to be Run after updating.
  
      progressBar: document.getElementById('os_progress_indicator'), // {Default is null} [Optional] If Using Electron with a HTML Progressbar, use that element here, otherwise ignore
      label: document.getElementById('logo_text'), // {Default is null} [Optional] If Using Electron, this will be the area where we put status updates using InnerHTML
      forceUpdate: false, // {Default is false} [Optional] If the Application should be forced updated.  This will change to true if any errors ocurr while launching.
      stageTitles: defaultStages, // {Default is defaultStages} [Optional] Sets the Status Title for Each Stage
  };
+
+ uaup.Update(updateOptions);
  
