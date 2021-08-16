@@ -35,6 +35,13 @@ ipc.on('update_downloaded', () => {
 
 })
 
+// ipc.on('download_progress', (e) => {
+//        console.log("testing");
+//        console.log(e);
+//      // document.getElementById('logo_text').innerHTML = e
+
+// })
+
 nav_smart_barBtn.addEventListener('click', () => {
      let navBtn = document.getElementById('os_side_nav');
  

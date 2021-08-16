@@ -1,7 +1,7 @@
 {
   "name": "alx-os",
   "productName": "ALX OS",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "description": "alx os working browser",
   "main": "src/main.js",
   "scripts": {

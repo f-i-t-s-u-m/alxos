@@ -11,7 +11,6 @@ const createWindow = () => {
     width: 800,
     height: 600,
     minWidth:500,
-    icon:'./assets/images/logo.ico',
    frame:false,
     // webPreferences: {
     //   // nodeIntegration: true,
@@ -63,20 +62,28 @@ const createWindow = () => {
 })
 
 mainWindow.once('ready-to-show', () => {
-  autoUpdater.checkForUpdatesAndNotify();
+
+  if (process.env.NODE_ENV === 'development'){
+  }
+ else {
+  autoUpdater.checkForUpdates();}
  });
  autoUpdater.on('update-available', () => {
    mainWindow.webContents.send('update_available')
- });
+  
+  });
  
- autoUpdater.on('update-downloaded', () => {
-   mainWindow.webContents.send('update_downloaded')
- });
+//  autoUpdater.on('update-downloaded', () => {
+//    mainWindow.webContents.send('update_downloaded')
+//  });
  
- autoUpdater.on('download-progress', (e) => {
-   console.log(e);
-   mainWindow.webContents.send('update_available')
- });
+//  autoUpdater.on('download-progress', (progressObj) => {
+//   //  console.log(e);
+//   let log_message = "Download speed: " + progressObj.bytesPerSecond;
+//   log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+//   log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+//    mainWindow.webContents.send('download_progress', log_message)
+//  });
 
 };
 
@@ -101,6 +108,10 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+app.on('will-quit', () => {
+  autoUpdater.quitAndInstall(true, false)
+})
 
 
 
