@@ -1,6 +1,7 @@
 const { app, BrowserWindow, BrowserView, ipcMain } = require('electron');
 const path = require('path');
 const ipc = ipcMain;
+const { autoUpdater } = require('electron-updater');
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 
 
@@ -85,6 +86,22 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
+});
+
+mainWindow.once('ready-to-show', () => {
+ autoUpdater.checkForUpdatesAndNotify();
+});
+autoUpdater.on('update-available', () => {
+  mainWindow.webContents.send('update_available')
+});
+
+autoUpdater.on('update-downloaded', () => {
+  mainWindow.webContents.send('update_downloaded')
+});
+
+autoUpdater.on('download-progress', (e) => {
+  console.log(e);
+  mainWindow.webContents.send('update_available')
 });
 
 // In this file you can include the rest of your app's specific main process
